@@ -1,0 +1,15 @@
+{
+    "require": {
+        "symfony/http-foundation": "^5.4",
+        "symfony/config": "^5.4",
+        "symfony/http-kernel": "^5.4",
+        "pimple/pimple": "^3.5",
+        "symfony/routing": "^5.4",
+        "phpmailer/phpmailer": "^6.9",
+        "firebase/php-jwt": "^6.10",
+        "sentry/sentry": "^4.7"
+    },
+    "autoload": {
+        "psr-0": { "": "src/" }
+    }
+}
