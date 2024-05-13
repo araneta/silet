@@ -16,7 +16,7 @@ class APIRouteProvider implements ControllerProviderInterface
         $route->get('/user', function () use ($app) {
             return $app->json([
                 'status'     =>  200,
-                'message'    => 'Hello world'
+                'message'    => $app['translator']->trans('Hello World!')
             ]);			
         });
         

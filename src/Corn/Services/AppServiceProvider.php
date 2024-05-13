@@ -29,7 +29,7 @@ class AppServiceProvider implements ServiceProviderInterface, BootableProviderIn
         $app['moistureDataService'] = $app->protect(function () use ($app) {
             return new MoistureDataService($app);
         });        
-        
+        $app['translator'] =  new TranslatorService($app);
     }
 
     public function boot(Application $app)
