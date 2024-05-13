@@ -6,11 +6,11 @@ class GlobalConfig
 {
     const LOGO_MAX_WIDTH = 240;
     const LOGO_MAX_HEIGHT = 240;
-	const SECRET_KEY = 'I-/^-{?Q0yZ|>tY6;tbEV]/fGJBka8UClh4PaEA :w,TFY)s+=/G(+):2KAUH]V!';
+	const SECRET_KEY = 'some random key';
     private static $dbHost = 'localhost';
 	private static $dbPort = '5432';
 	private static $dbUser = '';//'university';
-	private static $dbPass = '(g){Pjb);CCR';//'willamette';
+	private static $dbPass = '';//'a';
 	private static $dbName = '';//'university';
 	private static $dbSchema='cornmoisture';
 	
@@ -69,9 +69,9 @@ class GlobalConfig
     
     public static function getMailerConfig(){	
 		return array(
-			"host"=>"smtp-relay.sendinblue.com",
-			"username" => "aldopraherda@gmail.com",
-			"password" => "bxKLX3GYmr6gj72D",
+			"host"=>"",
+			"username" => "",
+			"password" => "",
 			"smtpauth" => true,
 			"smtpsecure" => "tls",
 			"port"=>587
