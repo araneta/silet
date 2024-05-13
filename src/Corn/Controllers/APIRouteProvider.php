@@ -19,6 +19,9 @@ class APIRouteProvider implements ControllerProviderInterface
                 'message'    => $app['translator']->trans('Hello World!')
             ]);			
         });
+        $route->get('/users', function (Application $app, Request $request) {
+            return  UserController::getAllUsers($app, $request);            
+        });
         
         $route->post('/signup', function (Application $app, Request $request) {
 			return  UserController::register($app, $request);            

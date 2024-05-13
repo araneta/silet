@@ -19,7 +19,24 @@ use Corn\Entities\UpdateProfileForm;
  */
 class UserController
 {
-
+	public static function getAllUsers(Application $app, Request $request)
+	{
+		
+		$userService = $app['userService']();
+		try{
+			return $app->json([
+				'status' => 1,
+				'message' => $userService->findAll(),
+			]);
+		}catch(\Exception $ex){
+			return $app->json([
+				'status' => 0,
+				'message' => $userService->transx('Exception').' '.$ex->getMessage(),
+			]);
+			
+		}
+	}
+	
     public static function verify(Application $app, Request $request)
     {
         $payload = $app['payload'];

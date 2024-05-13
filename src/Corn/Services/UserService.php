@@ -15,7 +15,9 @@ use Corn\Entities\SendNewPasswordForm;
 use Corn\Entities\UpdateProfileForm;
 
 class UserService
-{   private $app;
+{  
+	use Translator;
+	private $app;
 
     private $mapper = NULL;
 
@@ -134,6 +136,11 @@ class UserService
     public function findByEmail($email)
     {
         return $this->mapper->findByEmail($email);
+    }
+    
+	public function findAll()
+    {
+        return $this->mapper->findAll();
     }
 
     
